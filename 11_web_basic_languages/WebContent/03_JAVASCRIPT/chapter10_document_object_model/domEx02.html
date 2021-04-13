@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="checkbox" name="webLanguages" value="html">html
+	<input type="checkbox" name="webLanguages" value="css">css
+	<input type="checkbox" name="webLanguages" value="javascript">javascript
+	<input type="button" onclick="process1()" value="버튼">
+
+
+	<script>
+		function process1() {
+			var webLanguages = document.getElementsByName("webLanguages");
+			
+			//예시1) 배열의 크기 확인
+			console.log("length : " + webLanguages.length);
+			console.log("=================================");
+			
+			//예시2) value값 얻어오기
+			for (var i = 0; i < webLanguages.length; i++) {
+				console.log("data : " + webLanguages[i].value);
+			}
+			console.log("=================================");
+			
+			//예시3) check된 데이터 확인하기
+			for (var i = 0; i < webLanguages.length; i++) {
+				if (webLanguages[i].checked == true) {
+					console.log("(체크)" + webLanguages[i].value);
+				}
+			}
+			console.log("=================================");
+		}
+	</script>
+</body>
+</html>

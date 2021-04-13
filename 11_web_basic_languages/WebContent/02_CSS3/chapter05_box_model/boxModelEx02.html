@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>border(선)</title>
+<style>
+
+	/*
+ 		단위는 픽셀이거나 thin, medium, thick중에 하나일 수 있다.	
+	*/
+
+    p.thick {
+        border-style: solid;
+        border-width: thick;	/* border-style이 지정되어야 border-width가 동작을 한다. */
+    }
+
+    p.medium {
+        border-style: solid;
+        border-width: medium;
+    }
+
+    p.thin {
+        border-style: solid;
+        border-width: 1px;
+    }
+    
+</style>
+</head>
+<body>
+
+    <p class="thick">경계선이 thick으로 설정되었음</p>
+    <p class="medium">경계선이 medium으로 설정되었음</p>
+    <p class="thin">경계선이 1px으로 설정되었음</p>
+    
+</body>
+</html>

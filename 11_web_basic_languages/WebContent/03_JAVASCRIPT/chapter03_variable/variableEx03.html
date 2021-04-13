@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>데이터의 형변환(casting)</title>
+<script>
+
+	// 1) 정수 > 문자열
+	var nData = 1;   
+	var parseNData = String(nData);
+	
+	document.write(typeof nData , "<br>");
+	document.write(typeof parseNData , "<br><br>");
+	
+	
+	
+	// 2) 문자열 > 숫자
+	var strData1 = "100";
+	var parseStrData1 = Number(strData1);	   // Number (숫자형 형변환 클래스)
+	//var parseStrData1 = parseInt(strData1); // parseInt(숫자형[정수] 형변환 메서드)
+	
+	document.write(typeof strData1 , "<br>");
+	document.write(typeof parseStrData1 , "<br><br>");
+	
+	
+	// 3) 실수 > 문자열
+	var fData = 3.14;   
+	var parseFData = String(fData);
+	
+	document.write(typeof fData , "<br>");
+	document.write(typeof parseFData , "<br><br>");
+	
+	
+	// 4) 문자열 > 실수
+	var strData2 = "7.77";
+	//var parseStrData2 = Number(strData2);	   // Number (숫자형 형변환 클래스)
+	var parseStrData2 = parseFloat(strData2);  // parseFloat(숫자형[실수] 형변환 메서드)
+	
+	
+	document.write(typeof strData2 , "<br>");
+	document.write(typeof parseStrData2 , "<br><br>");
+	
+</script>
+</head>
+<body>
+</body>
+</html>

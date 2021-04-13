@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<body>
+
+	<form>
+		<fieldset>
+			<legend>회원 가입 화면</legend>
+			<p>
+				<label>이름 : <input type="text" id="" name="" value=""></label>
+			</p>
+			<p>
+				<label>아이디 : <input type="text" id="" name="" value=""></label>
+				<label> (아이디는 12자 이내로 입력하세요
+					<button onclick="alert('아이디 중복확인')">아이디 중복확인</button>)
+				</label>
+			</p>
+			<p>
+				<label>비밀번호 : <input type="password" id="" name="" value=""></label>
+			</p>
+			<p>
+				<input type="radio" id="" name="gender" value="male">남
+				<input type="radio" id="" name="gender" value="female">여
+			</p>
+			<p>
+				<label>사는 지역 :</label>
+				<select name="residence">
+					<option value="seoul">서울특별시
+					<option value="gyeonggi">경기도
+					<option value="gangwon">강원도
+					<option value="chungcheongbukdo">충청북도
+					<option value="chungcheongnamdo">충청남도
+					<option value="gyeongsangbukdo">경상북도
+					<option value="gyeongsangnamdo">경상남도
+					<option value="jeollabukdo">전라북도
+					<option value="jeollanamdo">전라남도
+				</select>
+			</p>
+			<p><label>이메일주소</label>
+				<input type="text" id="" name="" value=""> @ <input type="text" id="" name="" value="">
+				(이메일수신허용 
+				<input type="radio" id="" name="receive_email" value="email_allow" checked>허용
+				<input type="radio" id="" name="receive_email" value="email_refusal">거부)
+			</p>
+			<p>
+				<label> 직업 :</label>
+				<select name="residence">
+					<option value="student">학생
+					<option value="office_worker">회사원
+					<option value="self_employment">자영업
+				</select>
+			</p>
+			<p><label>자기소개</label><p>
+				<p><textarea rows="5" cols="50"></textarea><p>
+			<p>
+				<input type="submit" value="제출">
+				<input type="reset" value="취소">
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>

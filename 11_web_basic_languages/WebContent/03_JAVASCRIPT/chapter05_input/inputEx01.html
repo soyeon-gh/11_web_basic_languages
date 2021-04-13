@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> prompt </title>
+<script>
+	
+	/*
+	
+		[형식]
+		
+		prompt("안내문자열","기본값");
+	
+	
+		- 기본 데이터 타입은 문자열이다.
+	
+	*/
+
+	var getData1 = prompt("나이를 입력하세요");
+	document.write(typeof getData1 +" : " + getData1 +"<br>");
+
+	var getData2 = prompt("이름을 입력하세요" , "제임스고슬링");
+	document.write(typeof getData1 +" : " + getData2 +"<br>");
+	
+	var getData3 = prompt("다시 나이를 입력하세요 : ");
+	getData3 = Number(getData3);
+	document.write(typeof getData3 +" : " + getData3 +"<br>");
+	
+	
+	// NaN(Not a Number) : 숫자가 아님 
+	
+	var getHtmlGrade = prompt("html점수 : " ,"0");
+	var getCssGrade = prompt("css점수 : " ,"0");
+	var getJavascriptGrade = prompt("javascript점수 : " ,"0");
+
+	var getAvg = (Number(getHtmlGrade) + Number(getCssGrade) + Number(getJavascriptGrade)) / 3.0;
+	var result = getAvg >= 60.0 ? "합격": "불합격";
+	document.write(result);
+	
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테이블</title>
+<style>
+
+</style>
+</head>
+<body>
+		<!-- 
+	
+		1) caption : 테이블에 제목을 중앙 정렬로 표시한다.
+		
+		2) th : 헤더 효과(글자크기, 진하게, 가운데정렬)의 기능을 한다.
+		
+		3) thead , tbody , tfoot : 
+					- sementic tag : 문서의 의미를 만들어 주는 구조
+					- CSS , Javascript , Jquery로 타겟을 지정하는 부분에 용이하다.
+					- thead요소에는 관용적으로 <th>태그를 사용한다.
+		
+		4) colgroup , col : 열의 구조적인 그룹화를 하기 위해 사용
+		
+	 -->
+	<h2>기본 테이블</h2>
+	<table>
+		<colgroup> 										<!-- 테이블의 열을 그룹화 -->
+			<col style="background-color : #E2D2FD">	<!-- 한 열에 공통 속성 적용 -->
+			<col style="background-color : #D2E2FD">
+			<col style="background-color : #FFCCC6">
+		</colgroup>
+		<caption>테이블 예제</caption><!-- 테이블의 제목 -->
+		<thead><!-- 테이블의 머리글 -->
+			<tr>
+				<th>1열</th>
+				<th>2열</th>
+				<th>3열</th>
+			</tr>
+		</thead>
+		<tbody><!-- 표의 본문 -->
+			<tr>
+				<td>100</td>
+				<td>200</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>100</td>
+				<td>200</td>
+				<td>300</td>
+			</tr>
+		</tbody>
+		<tfoot><!-- 표의 바닥 -->
+			<tr>
+				<td>1의자리</td>
+				<td>10의자리</td>
+				<td>100의자리</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

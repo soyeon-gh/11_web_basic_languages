@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자식,자손,형제 결합자</title>
+<style>
+	
+	.type1 > p {
+		color : green;
+	}
+	
+	.type1 > .type1-2 > p {
+		color : blue;
+	}
+	
+	.type2 p {
+		color : red;
+	}
+	
+
+</style>
+</head>
+<body>
+
+	<div class="type1">
+		<div class="type1-1">
+			<p>type1-1스타일의 p태그<p>
+		</div>
+		<div class="type1-2">
+			<p>type1-2스타일의 p태그<p>
+		</div>	
+		<div class="type1-3">
+			<p>type1-3스타일의 p태그<p>
+			<div class="type1-3-1">
+				<p>type1-3-1의 p태그</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="type2">
+		<div class="type2-1">
+			<p>type2-1스타일의 p태그<p>
+		</div>
+		<div class="type2-2">
+			<p>type2-2스타일의 p태그<p>
+		</div>	
+		<div class="type2-3">
+			<p>type2-3스타일의 p태그<p>
+			<div class="type2-3-1">
+				<p>type2-3-1의 p태그</p>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

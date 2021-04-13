@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>데이터 타입</title>
+<script>
+
+	/*
+	
+		# 자바스크립트의 데이터 타입
+		
+		1) 숫자 (number)
+		2) 문자열 (string)
+		3) 불리언 (boolean)
+		4) undefined
+		5) 객체(object)
+	
+	*/
+
+	var nData = 1;
+	var fData = 1.5;
+	var cData = '@';		
+	var strData = "data";	
+	var isChecked = true;
+	var temp;				
+	var Prodcut = new Object( );{
+		pdCode : "0x1234";
+		pdName : "상품";
+	}
+	
+	// typeof : 데이터의 타입을 반환하는 연산자
+	document.write(typeof nData, "<br>");
+	document.write(typeof fData, "<br>");
+	document.write(typeof cData, "<br>");		// 자바스크립트에서는 ''(싱글쿼터)나 ""(더블쿼터) 모두 문자열 타입이다.
+	document.write(typeof strData, "<br>");		// 자바스크립트에서는 ''(싱글쿼터)나 ""(더블쿼터) 모두 문자열 타입이다.
+	document.write(typeof isChecked, "<br>");
+	document.write(typeof temp, "<br>");		// 초기화하지 않은 변수나 존재하지 않는 값의 접근에 반환
+	document.write(typeof Prodcut, "<br><hr>");
+	
+</script>
+</head>
+<body>
+</body>
+</html>

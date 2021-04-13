@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상클래스</title>
+<style>
+	
+	/*
+	
+		# 가상 클래스
+	
+		- :(콜론)이 붙어 있으면 가상클래스라고 한다.
+		- 클래스가 정의된 것처럼 간주한다.
+	
+	*/
+	
+	/* 사용 예시1 */
+	li:first-child  {color:red;}
+	li:nth-child(2) {color:yellow;}
+	li:nth-child(3) {color:green;}
+	li:nth-child(4) {color:pink;}
+	li:last-child   {color:blue;}
+	
+	
+	/* 사용 예시2 */
+	a:link 	   {color:red;}		/* 방문되지 않은 링크의 스타일 */
+	a:visited  {color:green;}   /* 방문된 링크의 스타일 */
+	a:hover	   {color:blue;}	/* 마우스가 위에 있을 때의 스타일 */
+	a:active   {color:yellow;}  /* 마우스로 클릭되는 순간의 스타일 */
+	
+	
+</style>
+</head>
+<body>
+	
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+		<li>d</li>
+		<li>e</li>
+	</ul>
+	<a href="http://www.naver.com">마우스를 올려보세요</a>
+
+</body>
+</html>
