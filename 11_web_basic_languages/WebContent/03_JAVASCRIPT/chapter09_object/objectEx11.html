@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "UTF-8">
+<title> date 객체 </title>
+<script>
+
+	var today = new Date();                             // 현재 시간 관련 정보
+	
+	console.log("오늘 날짜 정보");
+	console.log("현재 : " + today);
+    console.log("현재 연도: " + today.getFullYear());     
+	console.log("현재 월: " + today.getMonth());        // 0 ~ 11 (0월부터 시작한다.)
+	console.log("현재 일: " + today.getDate());    
+	console.log("현재 요일:" + today.getDay());         // 0 ~ 6 (일 ~ 토)
+	console.log("현재 시간:" + today.getTime());        // 1970년 1월 1일과 현재시간까지의 경과 시간(밀리초)
+    console.log("=======================");
+	
+    function checkDate() {
+
+        var date = document.getElementById("pdate").value;
+        console.log(date);
+
+        // 참고
+        var parseDate = new Date(date);             
+        console.log("선택 날짜 정보");
+        console.log("선택 : " + parseDate);
+        console.log("선택 연도: " + parseDate.getFullYear());     
+        console.log("선택 월: " + parseDate.getMonth());       
+        console.log("선택 일: " + parseDate.getDate());    
+        console.log("선택 요일:" + parseDate.getDay());        
+        console.log("선택 시간:" + parseDate.getTime());    
+
+    }
+	
+</script>
+</head>
+<body>
+    구입날짜: <input type="date" id="pdate"> <button onclick="checkDate()">검사</button>
+</body>
+</html>

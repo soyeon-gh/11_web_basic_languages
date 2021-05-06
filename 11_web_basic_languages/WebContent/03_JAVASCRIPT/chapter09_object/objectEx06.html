@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>window 객체</title>
+<script>
+    
+    /*
+  
+        # 브라우저 객체 모델 BOM (Browser Object Model )
+
+        - 웹 브라우저를 객체로 표현한다. 
+       
+       
+        # window 객체
+        
+         - window는 모든 객체의 조상(전역객체,글로벌객체)이다.
+         - 자바의 Object 클래스처럼 모든 객체를 다 포함하고 있기 때문에 window는 생략가능하다.  
+            Ex)
+            var data = "1234";
+            document.write(data);        // window가 생략되어있다.
+            document.write(window.data);
+
+
+    	    1) window.open(URL, name , specs , replace) 메서드
+		
+                인자 1) 새창에 보여질 주소 , 비워두면 빈창(about:blank)가 보인다.
+                인자 2) 
+                        _blank  : 새창에 열린다
+                        _parent : 부모 프레임에 열린다. 
+                        _top    : 로드된 프레임셋을 대체한다.
+                        _self   : 현재 페이지를 대체한다.                       
+                인자 3) 
+                        height : 창의 높이를 지정한다.
+                        width  : 창의 너비를 지정한다.
+                        left    : 모니터에서 보여지는 왼쪽 위치를 지정한다.
+                        top    : 모니터에서 보여지는 오른쪽 위치를 지정한다.
+                        menubar = yes/no/1/0 : 메뉴바의 사용여부를 지정한다.
+                        resizable=yes/no/1/0  : 창의 리사이즈 기능을 지정한다.
+                        scrollbars=yes/no/1/0 : 창의 스크롤바 기능을 지정한다.
+                        titlebar=yes/no/1/0   : 타이틀바를 기능을 지정한다.
+                인자 4) 히스토리 리스트에서 새로운 항목을 만들지 대체할지 결정한다.
+                        true  : 현재 히스토리를 대체한다.
+                        false : 히스토리에서 새로운 항목을 만든다.
+    
+    */
+
+    function openWindow() {
+        //window.open();
+        //window.open('ObjectEx01.html','_blank', 'width=700 , height=700');
+        //window.open('ObjectEx01.html','_blank', 'width=700 , height=700 , left=100 , top=50');
+  
+        // 객체를 반환해서 새창을 제어 할 수 있다.
+        var w = window.open(' ', '', 'width=700 , height=700 , left=50 , top=50');
+        w.document.write("<p>팝업 이미지 입니다..</p>");
+        w.document.write("<img src='../images/poodle.png' alt='poodle 사진' />");
+        w.document.write("<input type='button' value='close' onclick='window.close()'>"); 
+    }
+
+
+</script>
+</head>
+<body>
+    
+    <input type="button" value="윈도우 생성" onclick="openWindow()" /> <br>
+    <input type="button" value="구글창 열기" onclick="window.open('http://www.google.com','_blank','width=300','height=300',true)"><br>  
+
+</body>
+</html>

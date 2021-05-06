@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 사용자 정의 객체 </title>
+<script>
+
+	// 객체 생성 방법 1) 변수에 대입
+	var bike = { 
+		color: "black",
+		price: 5000000,
+		info: function( ) {
+			document.write("bike 색상 : " + this.color, "<br>");
+			document.write("bike 가격 : " + this.price, "<br>");
+		} 
+	}; 
+	document.write("<h1>bike 객체 메서드 호출</h1>");
+	document.write(bike.color + " / " + bike.price + "<br>");
+	bike.info();     
+	
+	
+	// 객체 생성방법 2)
+	var tv = new Object();{
+		tv.color = "white";
+		tv.price = 300000;
+		tv.info = function() {
+			document.write("tv색상 : " + this.color, "<br>");
+			document.write("tv가격 : " + this.price, "<br>");
+		}
+	}
+
+	document.write("<h1>tv 객체 메서드 호출</h1>");
+	document.write(tv.color + " / " + tv.price + "<br>");
+	tv.info();
+	
+	
+	// 객체 생성방법 3
+	function Car() {
+       this.color = "white";
+       this.price = 10000000;
+       this.info = function() {
+	   		document.write("car색상 : " + this.color, "<br>");
+	   		document.write("car가격 : " + this.price, "<br>");
+   		}
+	}
+
+	myCar = new Car();
+	document.write("<h1>myCar 객체 메서드 호출</h1>");
+	document.write(myCar.color + " / " + myCar.price + "<br>");
+	myCar.info();
+	
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> window 객체 </title>
+<script>
+
+	/*
+	
+		# window.setTimeout(함수 , 밀리초);
+	
+			- 지정한 밀리초 뒤에 함수가 실행된다.
+	
+		# window.setInterval(함수 , 밀리초);
+			
+			- 지정한 밀리초마다 함수가 실행된다.
+	
+		# window.clearInterval(객체)	
+			
+			- setInterval 메서드를 종료시킨다.
+	*/
+
+	// 동작할 함수
+	function showGreeting() {
+		alert("10초 뒤에 동작");
+	}
+
+	// 3초 뒤에 showGreeting 함수를 실행
+	setTimeout(showGreeting,10000);
+	
+
+	// 7초 뒤에 함수를 실행 : 이름이 없어서 익명함수라고 부른다.
+	setTimeout(function( ) {
+		alert("17초 뒤에 동작");
+	}, 17000);
+
+	
+	/////////////////////////////////////////////////////////////////////////////////////////
+	
+
+
+	var obj1
+	var picNum = 1;
+	// 주기적으로 동작할 함수1
+	function increaseNumber() {
+		
+		document.getElementById("pic").src = "../images/pic_" + picNum + ".jpg";
+		
+		picNum++;
+
+		if (picNum == 9) 
+			picNum = 1;
+	
+	}
+	
+	// increaseNumber를 주기적으로 실행시킬 함수
+	function startIncreaseImage() {
+		obj1 = setInterval(increaseNumber, 1000);
+	}
+
+	// increaseNumber를 멈출 함수
+	function stopIncreaseImage() {
+		clearInterval(obj1); 
+	}
+	
+
+	var subNum = 1000;
+	// 주기적으로 동작할 함수2
+	setInterval(function () {
+		subNum--;
+		console.log("subNum: " + subNum);
+	}, 1000);
+
+</script>
+</head>
+<body>
+
+	<img src="../images/pome.png" alt="연속된 이미지" id="pic" width="400" height="400">
+	<hr>
+	<button onclick="startIncreaseImage()">시작</button>
+	<button onclick="stopIncreaseImage()">중지</button>
+
+</body>
+</html>

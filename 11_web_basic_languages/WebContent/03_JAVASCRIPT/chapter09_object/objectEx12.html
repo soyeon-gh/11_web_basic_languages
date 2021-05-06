@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html>
+<html>
+<meta charset = "UTF-8">
+<title> try catch </title>
+<head>
+<script>
+
+    /*
+        - 문법 및 용도가 자바와 같다.
+    */
+
+    function test() {
+
+        try {
+            alert("정상적 구문!");
+            //alert("정상적 구문!");
+        } catch (e) {                     
+            alert("오류가 발생하였습니다. [msg] : " + e);
+        } finally {
+            alert("자바와 같다.");
+        }
+        
+    }
+
+</script>
+</head>
+<body>
+<input type="button" value="try-catch" onclick="test()" />
+</body>
+</html>

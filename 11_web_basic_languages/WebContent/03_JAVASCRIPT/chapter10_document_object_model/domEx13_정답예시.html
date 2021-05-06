@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습예제</title>
+</head>
+<body>
+	<div align="center" style="padding-top: 100px">
+		<form name="f">
+			<div align="center">
+				<h2>게시글 쓰기</h2>
+				<br>
+			</div>
+			<table style="width: 700px;" border="1">
+				<colgroup>
+					<col width="20%">
+					<col width="80%">
+				</colgroup>
+				<tr>
+					<td align="center"><span style="color: red">*</span> 작성자</td>
+					<td><input type="text" id="writer" name="writer" size="80"/></td>
+				</tr>
+				<tr >
+					<td align="center"><span style="color: red">*</span> 제목</td>
+					<td><input type="text" id="subject" name="subject" size="80"/></td>
+				</tr>
+				<tr>
+					<td align="center"><span style="color: red">*</span> 이메일</td>
+					<td><input type="email" id="email" name="email" size="80"/></td>
+				</tr>
+				<tr>
+					<td align="center"><span style="color: red">*</span> 비밀번호</td>
+					<td><input type="password" id="password" name="password" size="80"/></td>
+				</tr>
+				<tr>
+					<td align="center">글내용</td>
+					<td><textarea  rows="10" cols="50" id="content" name="content" ></textarea></td>
+				</tr>
+				<tr align="center">
+					<td colspan="2">
+						<input type="submit" value="글쓰기" />
+						<input type="button"  value="폼검증" onclick="formValidationCheck()"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	
+	<script>
+
+		function formValidationCheck() {
+			
+			var writer = document.f.writer;
+			if (writer.value == ""){
+				alert("작성자를 입력하세요.");
+			}
+			
+			var subject = document.f.subject;
+			if (subject.value == ""){
+				alert("제목을 입력하세요.");
+			}
+			
+			var email = document.f.email;
+			if (email.value == ""){
+				alert("이메일을 입력하세요.");
+			}
+			
+			var password = document.f.password;
+			if (password.value == ""){
+				alert("비밀번호를 입력하세요.");
+			}
+			
+		}
+	</script>
+	
+</body>
+</html>

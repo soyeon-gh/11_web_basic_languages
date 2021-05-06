@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 배열관련 함수 </title>
+<script>
+
+	//1) indexOf : 요소의 인덱스 출력
+	var datas = ["data1", "data2", "data3"];
+	
+	document.write(datas.indexOf("data3") +"<hr>");      // 출력: 2
+	
+	
+	//2) concat : 배열을 하나로 병합한다.
+    var x = [1, 2, 3];
+    var y = [4, 5, 6];
+    
+    document.write("x : " + x + "<br>");     			// 출력: 1,2,3
+    document.write("y : " + y + "<br>");     			// 출력: 1,2,3
+
+    var concatXY = x.concat(y);
+    document.write("concat : " + concatXY +"<hr>"); 	// 출력: 1,2,3,4,5,6
+    
+    
+    //3) join : 배열의 요소들을 join의 인자와 함께 하나의 문자열로 병합한다.
+    var fruits = ["apple", "banana", "peach"];
+    var parseFruits = fruits.join(" + ");
+    
+    document.write(typeof parseFruits + "<br>");		// 출력 : string
+    document.write(parseFruits +"<hr>");   				// 출력 : apple+banana+peach
+    
+    
+    //4) push : 배열의 맨 뒤에 요소를 추가한다.
+    var numbers = [1, 2, 3, 4, 5];
+
+    numbers.push(100);
+    numbers.push(1000);
+    document.write(numbers + '<hr>');         			// 출력: 1,2,3,4,5,100,1000
+    
+    
+  	//5) pop : 배열의 맨 뒤 요소를 제거한다.
+    var item = numbers.pop();
+    document.write("제거된 데이터 : " + item +"<br>");	 // 출력: 1000
+    document.write(numbers + '<br>');        			 // 출력: 1,2,3,4,5,100
+    
+    item = numbers.pop();
+    document.write("제거된 데이터 : " + item +"<br>");	 // 출력: 100
+    document.write(numbers + '<hr>');        			 // 출력: 1,2,3,4,5
+    
+    
+    //6) shift : 배열의 첫번째 값을 제거한다.
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    item = numbers.shift();
+    document.write(item + '<br>');        				 // 출력: 1
+    document.write(numbers +"<br>");       				 // 출력: 2,3,4,5,6,7,8,9,10
+    
+    item = numbers.shift();
+    document.write(item + '<br>');         				 // 출력: 2
+    document.write(numbers +"<hr>");       				 // 출력: 3,4,5,6,7,8,9,10
+    
+    
+    //7) slice : 배열을 나눈다.
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    document.write(numbers.slice(1,7) + '<br>');         // 출력: 2,3,4,5,6,7
+    document.write(numbers.slice(5) + '<hr>');           // 출력: 6,7,8,9,10
+
+    
+    
+    //(참고)sort : 배열을 오른차순으로 정렬한다.
+    var myArray = [10, 7, 23, 99, 169, 19, 11, 1];
+    
+    myArray.sort(function(a,b){
+    	return a-b;
+    });
+    document.write(myArray +"<br>");
+    
+    myArray = [10, 7, 23, 99, 169, 19, 11, 1];
+    myArray.sort(function(a,b){
+    	return b-a;
+    });
+    document.write(myArray +"<br>");
+    
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 문자열 관련 함수 </title>
+<script>
+
+    // substring() : 문자열 나누기
+	var phoneNum = "010-2345-1234";
+	var result = phoneNum.substring(4, 8);  // (시작인덱스, 종료인덱스); 
+	document.write(result,"<br>");
+    result = phoneNum.substring(4);         // (시작인덱스); 
+    document.write(result, "<hr>");
+
+    // charAt() : 문자 추출
+    document.write(phoneNum.charAt(0),"<br>");
+    document.write(phoneNum.charAt(1),"<br>");
+    document.write(phoneNum.charAt(2),"<hr>");
+
+
+    // replace() : 문자열 대체
+	var imgSrc = "images/bnt_out.jpg";
+	result = imgSrc.replace("out.jpg", "over.jpg");
+	document.write(result, "<hr>");
+
+     
+	// case() : 대소문자 전환
+    var sData = 'aBcDeF';
+    result = sData.toLowerCase(); // 소문자로 전환
+    document.write(result,"<br>"); 
+
+    result = sData.toUpperCase(); // 대문자로 전환
+    document.write(result,"<hr>"); 
+
+
+	// concat() : 문자열 연결
+    var sData1 = " 문자열 1 ";
+    var sData2 = " 문자열 2 ";
+
+    result = sData1.concat(sData2);
+    document.write(result + "<hr>"); 
+
+
+	// indexOf() : 인덱스 검색
+    sData = "자바스크립트에 오신 것을 환영합니다.";
+    result = sData.indexOf("환영");
+    document.write(result + "<hr>"); 
+    
+    
+    // split() : 문자열 나누기
+    sData = "One,Two,Three,Four,Five";
+    var array = sData.split(',');
+    for (var i = 0; i < array.length; i++) {
+        document.write(array[i] + " ");
+    }
+    document.write("<hr>"); 
+    
+</script>
+</head>
+<body>
+</body>
+</html>
