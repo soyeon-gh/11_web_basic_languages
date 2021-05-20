@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onload, ready</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+	<!-- 
+	window.onload = function(){
+		document.getElementById("test").style.backgroundColor="#7ACBAF";
+	} 
+	-->
+	
+	$(document).ready(function(){
+		$("#test").css("background","#7ACBAF");
+		
+	});
+</script>
+</head>
+<body>
+	<div id="test">test page</div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>기본선택자</title>
+<script src="../chapter01_make_jquery/js/jquery-3.6.0.min.js"></script>
+<script>
+
+	/*
+
+	- jQuery 의 DOM 탐색은 CSS SELECTOR 를 사용하고 있어서 
+	CSS에서 사용한 표현식을 알고 있다면 보다 쉽게 셀렉터를 사용할 수 있다.
+
+	- jQuery에서는 원하는 HTML 의 DOM 요소를 찾기 위해서 $(Selector), jQuery(Selector)와 같은 표현식을 사용한다.
+
+	
+	
+	1) 태그 선택자 
+		
+		- 특정한 태그를 선택
+		
+		[형식]
+		$(‘태그명’) 			 
+		
+		
+	
+	2) 아이디 선택자
+	
+		- 특정id명을 가진 요소 선택
+	
+		[형식]
+		$(‘#id명’) 				 
+	
+		
+		
+	3) 클래스 선택자
+
+		- 특정class명을 가진 요소 선택
+		
+		[형식]
+		$(‘.class명’)
+
+		
+		
+	4) 네임 선택자
+	
+		- 특정 name명을 가진 요소 선택
+		
+		[형식]
+		$(태그명[name='name명'])
+			
+			
+			
+	5) 자식 선택자
+	
+		- 직계 자식만 선택
+	
+		[형식]
+		$(‘부모요소1>자식요소2’)
+	
+	
+	6) 후손 선택자
+	
+		- 선택자 하위 요소 포함
+		
+		[형식]
+		$(‘요소1 요소2’) 	  	 
+	
+		
+		
+		
+	7) 멀티 선택자 
+		
+		- 여러 요소를 한번에 선택
+		
+		[형식]
+		$(‘요소1, 요소2’) 		 
+	
+		
+		
+		
+	8) 전체 선택자
+	
+		- dom안의 모든 엘레먼트 선택
+		
+		[형식]
+		$(‘*’)
+	
+*/
+	
+	$(document).ready(function(){
+		
+		// 1) 태그 선택자 예시
+		
+		$("#btn1").click(function(){
+			$("h2").css("color","#8CB1E0");
+			$("h3").css("color","#72D075");
+		})
+		
+		// 2) 아이디 선택자 예시
+		
+		$("#btn2").click(function(){
+			$("#header").css("color","#F699A4");
+		})
+		
+		// 3) 클래스 선택자 예시
+		
+		$("#btn3").click(function(){
+			$(".title").css("color","#EBDE48");
+		})
+		
+		// 4) 네임 선택자 예시
+		
+		$("#btn4").click(function(){
+			$("input[name='id']").css("color","#E648EB");
+		})
+		
+		// 5) 자식 선택자
+		
+		$("#btn5").click(function(){
+			$("#section>h1").css("color","#A248EB");
+		})
+		
+		// 6) 후손 선택자 예시
+		
+		$("#btn6").click(function(){
+			$("#tail h1").css("color","#B4B1B4");
+		})
+		
+		// 7) 멀티 선택자 예시
+		
+		$("#btn7").click(function(){
+			$("#nav3,#nav5,#nav7").css("color","#FFAF45");
+		})
+		
+		// 8) 전체 선택자 예시
+		
+		$("#btn8").click(function(){
+			$("*").css("color","#45FFD1");
+		})
+	});
+
+</script>
+</head>
+<body>
+	
+	<input type="button" id="btn1" value="버튼1"/>				
+	<input type="button" id="btn2" value="버튼2"/>
+    <input type="button" id="btn3" value="버튼3"/>
+    <input type="button" id="btn4" value="버튼4"/>
+    <input type="button" id="btn5" value="버튼5"/>
+    <input type="button" id="btn6" value="버튼6"/>
+    <input type="button" id="btn7" value="버튼7"/>
+    <input type="button" id="btn8" value="버튼8"/>
+    <hr>
+ 	<h2>h2태그</h2>
+ 	<h3>h3태그</h3>
+	name : <input type="text" name="id"><br>
+	<hr>
+    <div id="header">
+		<h1>Header Basic</h1>				<!--header안에 있으므로 직계자식-->
+		<div id="nav1">
+			<h1>Navigation1</h1>			<!--header안에 있긴 하나, nav라는 부모가 있으므로 직계가 아님-->
+		</div>
+		<div id="nav2">
+			<h1>Navigation2</h1>			<!--header안에 있긴 하나, nav라는 부모가 있으므로 직계가 아님-->
+		</div>
+		<div id="nav3">
+			<h1>Navigation3</h1>			<!--header안에 있긴 하나, nav라는 부모가 있으므로 직계가 아님-->
+		</div>
+	</div>
+	<div id="section">
+		<h1 class="title">Selector</h1> 	<!-- section의 직계자식 -->
+		<div id="nav4">	
+			<h1>Navigation4</h1> 			<!-- section의 후손 -->
+		</div>
+		<div id="nav5">	
+			<h1>Navigation5</h1> 			<!-- section의 후손 -->
+		</div>
+	</div>
+	<div id="tail">
+		<div id="nav6">
+			<h1 class="title">Tail</h1> 	<!-- tail의 후손 -->
+			<div id="nav7">	
+				<h1>Navigation7</h1>   	 	<!-- tail의 후손 -->
+				<div id="nav8">
+					<h1>Navigation8</h1> 	<!-- tail의 후손 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+</body>
+</html>
