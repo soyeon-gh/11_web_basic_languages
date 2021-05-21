@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>addClass() , removeClass()</title>
+<style>
+	.changeStyle {
+		background-color: yellow;
+		color: red;
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    
+    /*
+    
+    	$(선택자).addClass("클래스명")		: 클래스 속성을 추가한다.
+    	$(선택자).removeClass("클래스명")	: 클래스 속성을 제거한다.
+    
+    	- 웹에서 스타일을 추가하거나 제거하기 위해 주로 클래스(class) 속성을 선택자로 사용 
+    	- 선택자에서 직접 코드를 수정할 경우 코드와 스타일이 분리되지 못하여 유지보수에 단점
+		- 보통 클래스에 스타일을 정해두고 클래스를 추가하거나 제거하는 방법을 사용     
+    */
+    
+	$(document).ready(function () {           			   	
+        
+		$("#add").click(function(){
+			$("p").addClass("changeStyle");
+		});
+		
+		$("#remove").click(function(){
+			$("p").removeClass("changeStyle");
+		});
+		
+   	});
+	
+</script>
+</head>
+<body>
+    <p>화면에 표시되는 데이터 입니다.</p>
+    <input type="button" id="add" value="추가">
+    <input type="button" id="remove" value="삭제">
+</body>
+</html>

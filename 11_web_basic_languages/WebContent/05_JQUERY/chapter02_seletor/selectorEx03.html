@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폼 요소 선택자</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+/*
+
+	# 폼 요소 선택자 
+	
+	- 폼 요소의 선택자는 다음과 같다.
+	
+	[예시]
+	
+	$(":input") 		모든 input요소 선택
+	$(":text") 			모든 input요소중 type="text"인 요소만 선택
+	$(":password") 		모든 input요소중 type="password"인 요소만 선택
+	$(":radio") 		모든 input요소중 type="radio"인 요소만 선택
+	$(":checkbox") 		모든 input요소중 type="checkbox"인 요소만 선택
+	$(":submit") 		모든 input요소중 type="submit"인 요소만 선택
+	$(":reset") 		모든 input요소중 type="reset"인 요소만 선택
+	$(":button") 		모든 input요소중 type="button"인 요소만 선택
+	$(":image") 		모든 input요소중 type="image"인 요소만 선택
+	$(":file") 			모든 input요소중 type="file"인 요소만 선택
+	$(":hidden") 		모든 input요소중 type="hidden"인 요소만 선택
+
+*/	
+	$(document).ready(function(){
+		
+		$(':text').css("background","green");
+		$(':password').css("background","red");
+		$(':button').css("background","yellow");
+		$(':submit').css("background","orange");
+		$(':reset').css("background","pink");
+		
+	});
+	
+</script>
+</head>
+<body>
+	<form>
+		<p><input type="text"></p>
+		<p><input type="text"></p>
+		<p><input type="password"></p>
+		<p><input type="button" value="button"></p>
+		<p><input type="submit" value="submit"></p>
+		<p><input type="reset" value="reset"></p>
+	</form>
+</body>
+</html>

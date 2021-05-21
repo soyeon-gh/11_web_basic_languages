@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>val()</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+	
+	/*
+	
+		# val() : 
+		
+			$(셀렉터).val() 	 : 셀렉터의 값을 가져온다.
+			$(셀렉터).val(value) : 셀렉터의 값을 지정한다. 	
+			
+			- form태그 엘리먼트의 값을 가져온다.
+			- form태그 이외의 값은 가져오지 못하므로 text() 및 html() 메서드와 용도를 구별하여 사용한다.
+
+	*/
+
+   
+	$().ready(function(){
+		$("#button").click(function(){
+			alert("변경전 : " + $("#target").val());
+			$("#target").val("나는오늘도배가고프다");
+		})
+	});
+</script>
+</head>
+<body>
+
+ 	<input type="text" id="target" value="초깃값"><br>
+   	<button id="button">클릭</button>
+   	
+</body>
+</html>
