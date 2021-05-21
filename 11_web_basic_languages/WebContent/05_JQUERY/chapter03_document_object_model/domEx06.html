@@ -5,7 +5,61 @@
 <title>prop</title>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script>
-
+	
+	$().ready(function(){
+		
+		$("#changeSelectBox").click(function(){
+			
+			// 예시 1 ) 선택된 셀렉트 박스의 값을 조회하기
+			// alert("선택 된 value : " + $("#selectBox").val());
+			alert("선택 된 value : " + $("#selectBox :selected").val());
+			
+			// 예시 2 ) 선택된 셀렉트 박스의 값을 변경하기
+			var changeYear = prompt("변경 하고 싶은 연도 : ");
+			// $("#selectBox").val(changeYear);
+			$("#selectBox").val(changeYear).prop("seleted",true);
+			
+			// 예시 3 ) 셀렉트 박스를 비활성화하기
+			// disabled : 선택 비활성화
+			$("#selectBox").prop("disabled", true);
+			
+		})
+		
+		$("#changeRadioBox").click(function(){
+			
+			// radio는 name으로 분류
+			
+			// 예시 1 ) 선택된 라디오 박스의 값을 조회하기
+			alert("선택된 value : " + $("input[name='radioBox']:checked").val());
+		
+		
+			// 예시 2 ) 선택된 라디오 박스의 값을 변경하기
+			var changeYear = prompt("변경 하고 싶은 연도 : ");
+			$("input[name='radioBox'][value='" + changeYear + "']").prop("checked",true);
+			
+			
+			// 예시 3 ) 라디오 박스를 비활성화하기
+			$("input[name='radioBox']").prop("disabled", true);
+			
+		})
+		
+		$("#changeCheckBox").click(function(){
+			
+			// 예시 1 ) 체크박스 개수 확인하기
+			alert("전체 체크박스의 개수 : " + $("input[name='checkBoxTest']").length);
+		
+		
+			// 예시 2 ) 선택된 체크 박스의 개수 확인하기
+			alert("선택된 체크박스의 개수 : " + $("input[name='checkBoxTest']:checked").length);
+			//var changeYear = prompt("변경 하고 싶은 연도 : ");
+			//$("input[name='radioBox'][value='" + changeYear + "']").prop("checked",true);
+			
+			
+			// 예시 3 ) 체크 박스를 비활성화하기
+			$("input[name='checkBoxTest']").prop("disabled", true);
+			
+		})
+	});
 </script>
 </head>
 <body>
