@@ -17,24 +17,24 @@
 			- 백엔드 개발에서 attr()보다 대부분의 기능에서 prop()사용을 권장한다.
 
 	*/
-    
-	$().ready(function(){
-		$("#checkButton").click(function(){
-			
-			console.log("id : " + $("#targetId").prop("id"));
-			console.log("class : " + $("#targetId").prop("class"));
-			console.log("checked : " + $("#targetId").prop("checked"));
-			
-			console.log("\n");
-			// html body input 안에 checked가 있어야 인식함
-			console.log("id : " + $("#targetId").attr("id"));
-			console.log("class : " + $("#targetId").attr("class"));
-			console.log("checked : " + $("#targetId").attr("checked"));
-			console.log("================================================");
-			
-		})
-	});
-       
+    $().ready(function(){
+    	
+    	$("#checkButton").click(function(){
+    		
+    		console.log("id : " + $("#targetId").prop("id"));
+    		console.log("class : " + $("#targetId").prop("class"));
+    		console.log("checked : " + $("#targetId").prop("checked"));
+    		
+    		console.log("\n");
+    		
+    		console.log("id : " + $("#targetId").attr("id"));
+    		console.log("class : " + $("#targetId").attr("class"));
+    		console.log("checked : " + $("#targetId").attr("checked"));
+    		console.log("================================================");
+    	})
+    	
+    });
+	
     </script>
 </head>
 

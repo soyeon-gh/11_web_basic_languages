@@ -31,27 +31,40 @@
 	*/
 	
 	$().ready(function(){
-		
+
 		$("#button1").click(function(){
-			//alert("변경전 : " + $("#target1").html());
+			
+			//alert("변경전 : " + $("#target1").html());			
+			
 			$("#target1").html("<h1>html태그와 함께 변경하였습니다.</h1>");
-			alert("변경후 : " + $("#target1").html());
+			
+			alert("변경후 : " + $("#target1").html());	
+		
 		})
+		
 		
 		$("#button2").click(function(){
-			//alert("변경전 : " + $("#target2").text());
+			
+			// alert("변경 전 : " + $("#target2").text());
+			
 			$("#target2").text("<h1>html태그를 제외한 텍스트만 바꾸었습니다.</h1>");
-			alert("변경후 : " + $("#target2").text());
+			
+			alert("변경 후 : " + $("#target2").text());
+			
 		})
 		
+		
 	});
-	</script>
+	
+</script>
 </head>
 <body>
+
 	<div id="target1"> <span style="color:red">html()</span> 테스트 데이터 입니다.</div>
  	<div id="target2"> <span style="color:red">text()</span> 테스트 데이터 입니다.</div>
    	
    	<button id="button1">테스트1</button>
    	<button id="button2">테스트2</button>
+
 </body>
 </html>

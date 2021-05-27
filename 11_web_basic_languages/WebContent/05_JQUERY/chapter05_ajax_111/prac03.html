@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		$("#submitButton").click(function(){
+			
+			var checkedDataValueList = "";
+			$("input[name='hobbies']:checked").each(function(){
+				checkedDataValueList += $(this).val() + " ";
+			});
+			
+			var dataSet = {
+					name : $("#name").val(),
+					id : $("#id").val(),
+					pwd : $("#pwd").val(),
+					age : $("#age").val(),
+					gender : $("input[name='gender']:checked").val(),
+					hobbies : checkedDataValueList,
+					travel : $("#travel").val(),
+					content : $("#content").val(),
+			}
+			
+			$.ajax({
+				url:'prac03_pro.jsp',
+				type:'post',
+				data: dataSet,
+				success:function(){
+					$("#name").prop("disabled",true);
+					$("#id").prop("disabled",true);
+					$("#pwd").prop("disabled",true);
+					$("#age").prop("disabled",true);
+					$("input[name='gender']:checked").prop("disabled",true);
+					$("input[name='hobbies']").prop("disabled",true);
+					$("#travel").prop("disabled",true);
+					$("#content").prop("disabled",true);
+				}
+			});
+		});
+	});
+
+</script>
+</head>
+<body>
+	<button id="submitButton">데이터 전송</button>
+	<h1></h1>
+</body>
+</html>
